@@ -18,6 +18,7 @@
                 <th>Color</th>
                 <th>Price</th>
                 <th>Gender</th>
+                <th>Stock</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                 <td>{{ product.color }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.gender }}</td>
+                <td> </td>
                 <td>
                     <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
                     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>

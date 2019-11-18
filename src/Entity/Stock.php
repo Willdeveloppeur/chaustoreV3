@@ -25,12 +25,28 @@ class Stock
      * @ORM\Column(type="integer")
      */
     private $size_id;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $stock;
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    public function getStock(): ?int
+    {
+        return $this->stock;
+    }
+
+    public function setStock(int $stock): self
+    {
+        $this->stock = $stock;
+
+        return $this;
+    }
     public function getProductId(): ?int
     {
         return $this->product_id;
@@ -53,5 +69,11 @@ class Stock
         $this->size_id = $size_id;
 
         return $this;
+    }
+    public function __toString(){
+        // to show the name of the Category in the select
+        return $this->name;
+        // to show the id of the Category in the select
+        // return $this->id;
     }
 }

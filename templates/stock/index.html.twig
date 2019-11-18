@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stock index{% endblock %}
+
+{% block body %}
+    <h1>Size index</h1>
+<span><a href=" {{ path('back_office') }}"><h1>Menu</h1></a></span>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>product_ID</th>
+                <th>Size_ID</th>
+                <th>Stock</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for stock in stock %}
+            <tr>
+                <td>{{ stock.id }}</td>
+                <td>{{ stock.ProductId }}</td>
+                <td>{{ stock.SizeId }}</td>
+                <td>{{ stock.stock }}</td>
+                <td>
+                    <a href="{{ path('stock_show', {'id': stock.id}) }}">show</a>
+                    <a href="{{ path('stock_edit', {'id': stock.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('stock_new') }}">Create new</a>
+{% endblock %}
