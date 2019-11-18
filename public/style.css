@@ -1,0 +1,28 @@
+h1{
+    font-size: 3vw;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    text-align: center;
+}
+
+#titleLog{
+    text-align: center;
+}
+
+/* .mb-3{
+    text-align: center;
+} */
+.loglog{
+    margin:10% 35%;
+}
+h2{
+    font-size: 1.5vw;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.alert.alert-danger{
+    font-size: 3vw;
+color: red;
+text-align: center;
+}

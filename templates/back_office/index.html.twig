@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello BackOfficeController!{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('style.css') }}" />
+{% endblock %}
+{% block title %}Simplon_Chaustore !{% endblock %}
 
 {% block body %}
 <style>
@@ -9,8 +11,10 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Bienvenue sur le  {{ controller_name }}! ✅</h1>
-<span><a href=" {{ path('back_office') }}"><h1>Menu</h1></a></span>
+    <h1>Gestion Simplon Chaustore !</h1>
+    <a href="{{ path('app_logout') }}">Se déconnecter</a>
+    <span><a href=" {{ path('app_login') }}">Login</a></span>
+<span><a href=" {{ path('back_office') }}"><h2>Menu</h2></a></span>
 
 <span><a href=" {{ path('product_index') }}">Product</a></span>
 <span><a href=" {{ path('brand_index') }}">Brand</a></span>
