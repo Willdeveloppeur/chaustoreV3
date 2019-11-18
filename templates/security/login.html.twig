@@ -11,6 +11,7 @@
     {% if app.user %}
         <div class="mb-3">
             Vous êtes connecté en tant que :  {{ app.user.username }}, <a href="{{ path('app_logout') }}">Se déconnecter</a>
+            <span><a href=" {{ path('back_office') }}"><h2>Menu</h2></a></span>
         </div>
     {% endif %}
     <h1 id='titleLog'>BackOffice Chaustore Simplon !</h1>

@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('style.css') }}" />
+{% endblock %}
 {% block title %}Product index{% endblock %}
 
 {% block body %}
@@ -11,6 +13,9 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Image</th>
+                <th>Category</th>
+                <th>Brand</th>
+                <th>Color</th>
                 <th>Price</th>
                 <th>Gender</th>
                 <th>actions</th>
@@ -22,6 +27,9 @@
                 <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.image }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.brand }}</td>
+                <td>{{ product.color }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.gender }}</td>
                 <td>

@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Chaustore V3{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('style.css') }}" />
+{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}

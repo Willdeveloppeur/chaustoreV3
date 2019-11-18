@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
-
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('style.css') }}" />
+{% endblock %}
 {% block title %}Product{% endblock %}
 
 {% block body %}
@@ -18,6 +20,18 @@
             <tr>
                 <th>Image</th>
                 <td>{{ product.image }}</td>
+            </tr>
+             <tr>
+                <th>Category</th>
+                <td>{{ product.category }}</td>
+            </tr>
+             <tr>
+                <th>Brand</th>
+                <td>{{ product.brand }}</td>
+            </tr>
+             <tr>
+                <th>Color</th>
+                <td>{{ product.color }}</td>
             </tr>
             <tr>
                 <th>Price</th>

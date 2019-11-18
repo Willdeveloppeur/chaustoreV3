@@ -94,4 +94,5 @@ class SizeController extends AbstractController
 
         return $this->redirectToRoute('size_index');
     }
+    
 }
